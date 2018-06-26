@@ -52,6 +52,7 @@
 # Copyright 2018 Shinichi TAMURA <shnch.tmr@gmail.com>                         #
 # Copyright 2018 Wan Liuyang <tsfdye@gmail.com>                                #
 # Copyright 2018 sfdye <tsfdye@gmail.com>                                      #
+# Copyright 2018 João Pedro <jpmartins201@live.com>                            #
 #                                                                              #
 # This file is part of PyGithub.                                               #
 # http://pygithub.readthedocs.io/                                              #
@@ -1353,15 +1354,6 @@ class Repository(github.GithubObject.CompletableGithubObject):
             self.url + "/commits",
             url_parameters
         )
-
-    def get_contents(self, path, ref=github.GithubObject.NotSet):
-        """
-        :calls: `GET /repos/:owner/:repo/contents/:path <http://developer.github.com/v3/repos/contents>`_
-        :param path: string
-        :param ref: string
-        :rtype: :class:`github.ContentFile.ContentFile`
-        """
-        return self.get_file_contents(path, ref)
 
     def get_file_contents(self, path, ref=github.GithubObject.NotSet):
         """

@@ -37,7 +37,7 @@ import github.GithubObject
 
 class File(github.GithubObject.NonCompletableGithubObject):
     """
-    This class represents Files
+    This class represents Files. The reference can be found here https://developer.github.com/v3/pulls/#list-pull-requests-files
     """
 
     def __repr__(self):
